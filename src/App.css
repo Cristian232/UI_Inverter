@@ -1,0 +1,152 @@
+body {
+  background-color: #1a1a1a;
+  background-image:
+          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+          radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+          radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+          radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+          radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+          radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.6) 2px, transparent 2px),
+          radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.7) 2px, transparent 2px),
+          radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+          radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 1000px 1000px;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.dashboard-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.kpi-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+  background: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+}
+
+.kpi-card h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.kpi-card p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.power-chart {
+  background: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.chart-placeholder {
+  height: 400px;
+  background-color: #333;
+}
+
+.environment-benefits {
+  background: #2d2d2d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.countdown-circle {
+  transform: rotate(-90deg);
+}
+
+.circle-background {
+  fill: none;
+  stroke: #444;
+  stroke-width: 8;
+}
+
+.circle-progress {
+  fill: none;
+  stroke: #ff9900;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  transition: stroke-dasharray 1s linear;
+}
+
+.countdown-text {
+  position: absolute;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.power-chart h3, .environment-benefits h3 {
+  color: #fff;
+}
+
+.environment-benefits p {
+  color: #fff;
+}
+
+@keyframes move-stars {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px, -1000px -1000px, 1500px 1500px, -500px -500px, 800px -800px;
+  }
+}
+
+body {
+  background-color: #1a1a1a;
+  background-image:
+          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+          radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+          radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.3) 2px, transparent 2px),
+          radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.5) 2px, transparent 1px),
+          radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+          radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.6) 2px, transparent 2px),
+          radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.8) 2px, transparent 1px),
+          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.7) 2px, transparent 2px),
+          radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.9) 1px, transparent 1px),
+          radial-gradient(circle at 90% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 1000px 1000px;
+  background-attachment: fixed;
+  animation: move-stars 15s linear infinite;
+}
