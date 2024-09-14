@@ -14,9 +14,10 @@ function Dashboard() {
     const fetchWeatherData = async () => {
         setLoading(true);
         try {
-            const response = await fetch(
-                '/api/rest/pvms/web/kiosk/v1/station-kiosk-file?kk=sNajsiGlq0dMM0Hu7kBh34ymBJaLseed'
-            );
+            const response = await fetch('/api');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
             const parsedData = JSON.parse(data.data.replace(/&quot;/g, '"'));
             setWeatherData(parsedData);
